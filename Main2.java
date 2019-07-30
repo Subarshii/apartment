@@ -30,34 +30,24 @@ public class Main2 {
                     for (int j = 0; j < apartment.length; j++) {
                         if (apartment[j].getName().equals(findname)) {
                             printRenter(apartment[j]);
-
                         }
                     }
                     break;
                 }
                 case "-1": {
                     System.out.println("Delete name name");
-
                     String name = scanner.nextLine();
-
-                    for (int s = 0; s < apartment.length; s++) {
-                        if (apartment[s].getName().equals(name)) {
-                            for (int j = s; j < apartment.length - 1; j++) {
-                                apartment[i] = apartment[i + 1];
-                                System.out.println(apartment[j].getName());
-                            }
+                    for (int k = 0; k < apartment.length - 1; k++) {
+                        if (!apartment[k].getName().equals(name)) {
+                            printRenter(apartment[k]);
                         }
-
                     }
                     break;
                 }
-
                 default: {
-                    System.out.println("input condition");
+                    System.out.println("input condition 0 and -1");
                 }
-
             }
-
             choose = scanner.nextLine();
 
         }
