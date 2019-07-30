@@ -26,20 +26,18 @@ public class Main2 {
                     System.out.println("Enter find name");
 
                     String findname = scanner.nextLine();
+                        if (apartment[i].getName().equals(findname)) {
+                            printRenter(apartment[i]);
 
-                    for (int j = 0; j < apartment.length; j++) {
-                        if (apartment[j].getName().equals(findname)) {
-                            printRenter(apartment[j]);
-                        }
                     }
                     break;
                 }
                 case "-1": {
                     System.out.println("Delete name name");
                     String name = scanner.nextLine();
-                    for (int k = 0; k < apartment.length - 1; k++) {
-                        if (!apartment[k].getName().equals(name)) {
-                            printRenter(apartment[k]);
+                    for (int j = 0; j < apartment.length - 1; j++) {
+                        if (!apartment[j].getName().equals(name)) {
+                            printRenter(apartment[j]);
                         }
                     }
                     break;
